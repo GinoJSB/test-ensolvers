@@ -1,4 +1,4 @@
-package com.note.demo.model.Entity;
+package com.note.demo.model.Entity.Entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -19,7 +19,7 @@ public class Note {
     private boolean archived = false;
 
     @ElementCollection
-    private List<String> categories = new ArrayList<>(); // Campo para categorías
+    private List<String> categories = new ArrayList<>();
 
     public Note() {}
 
