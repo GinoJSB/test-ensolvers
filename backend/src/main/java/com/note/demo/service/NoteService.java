@@ -25,7 +25,7 @@ public class NoteService implements INoteService {
         List<Note> notes = noteRepository.findAll();
         return notes.stream()
                 .map(noteMapper::toResponseDTO)
-                .toList(); // Transformación usando Mapper
+                .toList();
     }
 
     @Override
