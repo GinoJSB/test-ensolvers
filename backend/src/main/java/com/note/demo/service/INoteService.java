@@ -2,30 +2,22 @@ package com.note.demo.service;
 
 import com.note.demo.model.DTO.NoteReqDTO;
 import com.note.demo.model.DTO.NoteResponseDTO;
-import com.note.demo.model.Entity.Note;
 
 import java.util.List;
 
 public interface INoteService {
 
+    List<NoteResponseDTO> getNotes();
 
-    List<Note> getNotes();
+    NoteResponseDTO saveNote(NoteReqDTO noteReqDTO);
 
-
-    void saveNote(Note note);
-
-
-    void deleteNote(Long id);
-
-
-    Note findNoteById(Long id);
-
+    NoteResponseDTO findNoteById(Long id);
 
     NoteResponseDTO updateNote(Long id, NoteReqDTO noteReqDTO);
 
+    void deleteNote(Long id);
 
     void archiveNote(Long id, boolean archived);
 
-
-    List<Note> getNotesByCategory(String category);
+    List<NoteResponseDTO> getNotesByCategory(String category);
 }
